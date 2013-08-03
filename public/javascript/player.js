@@ -19,7 +19,7 @@ $(document).ready(function(){
 	//Init Deezer Player
 	window.dzAsyncInit = function() {
 		DZ.init({
-			appId  : '112611', //Your app id
+			appId  : '123456', //Your app id
 			channelUrl : 'http://'+window.location.host,
 			player : {
 				onload: deezerReady
