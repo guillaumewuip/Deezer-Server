@@ -17,7 +17,7 @@ Remember your Application ID.
 Edit remote.js and player.js
 ----------------------------
 
-Edit remote.js and player.js with your Application ID (line 20).
+Edit [remote.js](https://github.com/guiguiwuip/Deezer-Server/blob/master/public/javascript/remote.js) and [player.js](https://github.com/guiguiwuip/Deezer-Server/blob/master/public/javascript/remote.js) with your Application ID (line 20).
 
 Start the NodeJS server
 -----------------------
