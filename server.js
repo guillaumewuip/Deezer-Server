@@ -230,15 +230,15 @@ io.sockets.on('connection', function (client) {
   	//Play a Radio
 	client.on('radio', function (data) {
 		queue = []; //Delete the queue
-    	io.sockets.in("players").emit('radio', data);
-    	musicMode = "radio";
+	    	io.sockets.in("players").emit('radio', data);
+	    	musicMode = "radio";
 	});	
 
 	//Play a SmartRadio
 	client.on('smartRadio', function (data) {
 		queue = []; //Delete the queue
-    	io.sockets.in("players").emit('smartRadio', data);
-    	musicMode = "radio";
+	    	io.sockets.in("players").emit('smartRadio', data);
+	    	musicMode = "radio";
 	});	
 
 
@@ -293,46 +293,46 @@ io.sockets.on('connection', function (client) {
 
 	//Play
 	client.on('play', function () {
-    	io.sockets.in("players").emit('play');
+    		io.sockets.in("players").emit('play');
 
-    	//Update Volume
+    		//Update Volume
 		io.sockets.in("players").emit('volume', volume);
 		console.log(queue);
 	});
 
 	//Pause
 	client.on('pause', function () {
-    	io.sockets.in("players").emit('pause');
+    		io.sockets.in("players").emit('pause');
 	});
 
 	//Prev
 	client.on('prevTrack', function () {
     	//If radio, players have next/prev tracks
-    	if(musicMode != "radio" && history.length > 0) {
+    		if(musicMode != "radio" && history.length > 0) {
 			queue.unshift(history[history.length-1]);
 			io.sockets.in('players').emit('track', queue[0]);
-    	}
+    		}
 
-    	console.log("Prev");
+    		console.log("Prev");
 		console.log("History", history);
 		console.log("Queue", queue);
 	});
 
 	//Next
 	client.on('nextTrack', function () {
-    	//If radio, players have next/prev tracks
-    	if(musicMode != "radio" && queue.length > 0) {
-    		io.sockets.in('players').emit('track', queue[0]);
-    	}
+    		//If radio, players have next/prev tracks
+    		if(musicMode != "radio" && queue.length > 0) {
+    			io.sockets.in('players').emit('track', queue[0]);
+    		}
 
-    	console.log("Next");
+    		console.log("Next");
 		console.log("History", history);
 		console.log("Queue", queue);
 	});
 
 	//Seek
 	client.on('seek', function (seek) {
-    	io.sockets.in("players").emit('seek', seek);
+    		io.sockets.in("players").emit('seek', seek);
 	});
 
 
