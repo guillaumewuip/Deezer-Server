@@ -2,7 +2,7 @@ Deezer-Server
 =============
 
 Want to play tracks with Deezer in the open-space but everyone want to control the music ?    
-This is a NodeJs server to play and control Deezer with multiple remotes.
+This is a NodeJS server to play and control Deezer with multiple remotes.
 
 Installation
 ============
