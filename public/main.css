@@ -1,0 +1,140 @@
+html, body{
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+.inline{
+	display: inline-block;
+	vertical-align: middle;
+}
+#nav .inline {
+   padding: 0 2em;
+}
+#nav .inline a:hover{
+	text-decoration: none;
+}
+input{
+	min-height: 28px;
+}
+button:hover{
+	cursor: pointer;
+}
+
+div.flash {
+	position: fixed;
+	top: -1000px;
+	right: 5%;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	max-width: 50%;
+	background-color: #f9f9f9;
+	z-index: 300;
+	border-radius: 0.2em;
+	box-shadow: 0px 0px 10px #222;
+}
+div.flash.open{
+	top: 0;
+}
+	div.flash p {
+		margin: 0;
+		padding: 1em;
+	}
+
+div.content table button {
+	margin: 0 0.2em;
+}
+
+table th:last-child {
+	min-width: 270px
+}
+
+
+div.music{
+	margin-top: 1em;
+	font-size: 1em;
+	line-height: 1em;
+}
+	div.music form {
+		width: 100%;
+	}
+		div.music ul {
+			padding: 0;
+		}
+		div.music ul li {
+			text-align: left;
+			display: block !important;
+			width: 100%;
+		}
+
+div.queue {
+	width: 100%;
+}
+	div.queue ul.container {
+		overflow-x: hidden;
+		overflow-y: scroll;
+		height: 0;
+		opacity: 0;
+		max-height: 22em;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		-ms-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		padding: 0;
+	}
+	div.queue.open ul.container {
+		height: auto;
+		opacity: 1;
+	}
+		div.queue ul.container li.block {
+			text-align: left;
+			border-top: 1px solid #777;
+			z-index: auto !important;
+		}
+			div.queue.open ul.container .block .btn-group {
+				float: right;
+			}
+			div.queue.open ul.container .block .clr {
+				clear: both;
+			}
+				div.queue ul.container li.block .dropdown-menu {
+					left: auto !important;
+					right: 0;
+				}
+				div.queue ul.container li.block .dropdown-menu li a{
+					text-align: left;
+				}
+		div.queue ul.container li.history {
+			color: #a2a2a2;
+		}
+	div.queue div.button {
+		width: 100%;
+		height: 1.4em;
+		text-align: center;
+	}
+	div.queue div.button:hover {
+		background: #777;
+		cursor: pointer;
+	}
+
+
+
+div.infosbox {
+	padding: 1em;
+	background: #a2a2a2;
+	font-size: 1.4em;
+	line-height: 1.2em;
+	margin-top: 3em;
+}
+	div.music ul, div.infosbox ul{
+		list-style: none;
+	}
+		div.music ul ul, div.infosbox ul ul {
+			font-size: 0.8em;
+		}
+	div.music li.position input {
+		width: 100%;
+	}

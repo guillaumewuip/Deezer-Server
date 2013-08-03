@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{title}}</title>
+		<script src="javascript/jquery.js"></script>
+	</head>
+	
+	<body>
+		<div id="dz-root"></div>
+
+		<div id="outer-wrap" class="h100">
+		
+			<div class="flash open">
+				<p>Loading ...</p>
+			</div>
+		
+			<div id="inner-wrap">
+
+			  <header id="top" class="top" role="banner">
+			        <div class="block">
+			            <!-- <h1 class="block-title">
+			            	Deezer
+			            </h1> -->
+			            <a class="nav-btn" id="nav-open-btn" href="#nav">Navigation</a>
+			        </div>
+			    </header>
+
+			    <nav id="nav" role="navigation">
+			        <div class="block">
+			        
+			            <ul class="nav">
+			            
+							<li class="inline dropdown">
+
+								<a class="dropdown-toggle btn " data-toggle="dropdown" href="#"> Favorites <b class="caret"></b> </a>
+								
+								<ul class="dropdown-menu">
+								  <li class="search" ><a href="tracks" class="deezer" data-type="api" data-obj="user">Tracks</a></li>
+								  <li class="search" ><a href="albums" class="deezer" data-type="api" data-obj="user">Albums</a></li>
+								  <li class="search" ><a href="playlists" class="deezer" data-type="api" data-obj="user">Playlists</a></li>
+								  <li class="search" ><a href="radios" class="deezer" data-type="api" data-obj="user">Radios</a></li>
+								  <li class="search" ><a href="artists" class="deezer" data-type="api" data-obj="user">Artists</a></li>
+								</ul>
+								
+							</li>
+			            
+			                
+			                
+			                <li class="inline">
+			                    <form class="navbar-search pull-left search">
+								  <input type="text" class="search-query" placeholder="Search">
+								</form>
+			                </li>
+			                
+			                <li class="inline commandes">
+			                    <div class="commandes">
+				            		<a href="#" class="btn command play" data-type="play"><i class="icon-play icon-2x"></i></a>
+				            		<a href="#" class="btn command pause" data-type="pause"><i class="icon-pause icon-2x"></i></a>
+				            					            		
+				            		<a href="#" class="btn command" data-type="volume" data-obj="-10"><i class="icon-volume-down icon-2x"></i></a>
+				            		<a href="#" class="btn command" data-type="volume" data-obj="+10"><i class="icon-volume-up icon-2x"></i></a>
+				            					            		
+				            		<a href="#" class="btn command prev" data-type="prevTrack"><i class="icon-backward icon-2x"></i></a>
+				            		<a href="#" class="btn command next" data-type="nextTrack"><i class="icon-forward icon-2x"></i></a>
+				            	</div>
+
+			                </li>
+			                
+			            </ul>
+						<div class="music nav">
+							<ul>
+								<li class="current">No track</li>
+								<li class="position"><form ><input type="range" min="0" max="100" step="1"></form></li>
+							</ul>
+						</div>
+						<div class="queue nav">
+							<ul class="container"></ul>
+							<div class="button">
+								<p><i class="icon-chevron-down"></i></span></p>
+							</div>
+						</div>
+			            <a class="close-btn" id="nav-close-btn" href="#top">Return to Content</a>
+			        </div>
+			        
+			    </nav>
+			    
+				<div id="main" role="main">
+					
+					<h1 class="title">Welcome</h1>
+					
+					{{{body}}}
+					
+					<div class="infosbox">
+						<ul>
+							<li class="deezer">
+								Deezer
+								<ul>
+									<li>Status : <span class="label label-important">Not connected</span></li>
+								</ul>
+							</li>
+							<li class="connection">
+								Serveur
+								<ul>
+									<li>Id : <span class="id"></span></li>
+									<li>Status : <span class="label label-important">Not connected</span></li>
+								</ul>
+							</li>
+							<li class="players">
+								Players <span></span>
+								<ul>
+								</ul>
+							</li>
+							<li class="remotes">
+								Remotes <span></span>
+								<ul>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				
+				</div>				
+			    
+		    </div>
+		    
+		</div>
+		
+		
+		<!--[if lt IE 9]>
+      		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    	<![endif]-->
+		    	
+    	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    	<link href="menu.css" rel="stylesheet">
+    	<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    	<link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    	<link href="main.css" rel="stylesheet">
+    	
+    	<script src="javascript/modernizr.js"></script>
+    	<script src="/bootstrap/js/bootstrap.js"></script>
+    	<script src="javascript/menu.js"></script>
+    	<script src="socket.io/socket.io.js"></script>
+    	
+	</body>
+</html>
