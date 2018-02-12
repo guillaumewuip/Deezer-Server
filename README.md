@@ -25,5 +25,5 @@ Start the server with `node server.js`.
 
 Enjoy
 -----
-In a browser load the player page (ex: [1http://92.168.0.10/player](http://192.168.0.10/player) ).   
+In a browser load the player page (ex: [http://192.168.0.10/player](http://192.168.0.10/player) ).   
 You can load remotes with [http://192.168.0.10/](http://192.168.0.10/).
